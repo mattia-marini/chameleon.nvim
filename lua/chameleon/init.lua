@@ -116,6 +116,7 @@ local setup_autocmds = function()
       local fg_color = string.format("#%06X", vim.api.nvim_get_hl(0, { name = "Normal" }).fg)
 
 
+
       change_background(bg_color)
       change_foreground(fg_color)
     end,
@@ -158,4 +159,6 @@ M.setup = function()
   end
 end
 
+require("chameleon.register")
+require("chameleon.kitty")
 return M
